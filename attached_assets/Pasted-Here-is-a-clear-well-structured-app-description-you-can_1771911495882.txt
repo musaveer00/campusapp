@@ -1,0 +1,235 @@
+Here is a **clear, well-structured app description** you can directly give to **Replit AI** to generate your project.
+
+---
+
+# 📘 App Name: **Campus Administration System**
+
+## 📌 Project Overview
+
+The **Campus Administration System** is a web-based application designed to manage and monitor academic activities for both **Students** and **Teachers** in a college environment (JNTUH based).
+
+The system provides a secure login system and separate dashboards for Students and Teachers.
+
+---
+
+# 🔐 Login System
+
+### Default Login Credentials (for demo purpose)
+
+**Admin Login**
+
+* Login ID: `admin`
+* Password: `admin123`
+
+**Student Login**
+
+* Login ID: `student`
+* Password: `student123`
+
+**Teacher Login**
+
+* Login ID: `teacher`
+* Password: `teacher123`
+
+After login, user selects role:
+
+* 👨‍🎓 Student
+* 👨‍🏫 Teacher
+
+---
+
+# 🎓 Student Dashboard
+
+After selecting **Student**, the following options should be displayed:
+
+---
+
+## 1️⃣ Attendance
+
+* Display subject-wise attendance percentage.
+* Show overall attendance.
+* Highlight shortage if attendance < 75%.
+
+Example:
+
+* Mathematics – 85%
+* DBMS – 78%
+* Operating Systems – 92%
+* Overall – 84%
+
+---
+
+## 2️⃣ Timetable
+
+* Weekly timetable (Monday–Saturday)
+* Display subject, time, and faculty name.
+
+---
+
+## 3️⃣ Syllabus
+
+* Show semester-wise syllabus.
+* Provide downloadable syllabus PDF option.
+
+---
+
+## 4️⃣ Results
+
+When clicking **Results**, redirect to:
+
+* [http://results.jntuh.ac.in/](http://results.jntuh.ac.in/)
+* [https://jntuhresults.vercel.app/academicresult](https://jntuhresults.vercel.app/academicresult)
+
+Open in a new tab.
+
+---
+
+## 5️⃣ Overall Academic View
+
+Display:
+
+* Attendance summary
+* Mid marks
+* Semester result status
+* Performance graph (optional chart)
+
+---
+
+## 6️⃣ Notes / Study Material
+
+When clicking **Notes**, redirect to:
+
+[https://cselnr223.ccbp.tech/](https://cselnr223.ccbp.tech/)
+
+Open in new tab.
+
+---
+
+# 👨‍🏫 Teacher Dashboard
+
+After selecting **Teacher**, show:
+
+---
+
+## 1️⃣ Syllabus
+
+* Upload syllabus
+* View syllabus
+
+---
+
+## 2️⃣ Subject Management
+
+* Add Subject
+* Edit Subject
+* Delete Subject
+* Assign subject to class
+
+---
+
+## 3️⃣ Mid Results
+
+* Enter internal marks
+* Update marks
+* View student marks list
+
+---
+
+## 4️⃣ Student Performance
+
+* View student attendance
+* View mid marks
+* Performance analytics
+* Identify low-performing students
+
+---
+
+## 5️⃣ Subject Text Book
+
+* Add textbook details:
+
+  * Book Name
+  * Author
+  * Publication
+* Upload PDF link
+
+---
+
+# 🖥️ Technical Requirements (For Replit)
+
+Build using:
+
+* Frontend: HTML, CSS, JavaScript
+* Backend: Node.js + Express (optional)
+* Database: JSON / MongoDB / SQLite (simple local storage is okay for demo)
+
+---
+
+# 📁 Suggested Project Structure
+
+```
+campus-admin-system/
+│
+├── index.html (Login Page)
+├── student.html (Student Dashboard)
+├── teacher.html (Teacher Dashboard)
+├── style.css
+├── script.js
+├── server.js (if backend used)
+└── database.json
+```
+
+---
+
+# 🎨 UI Requirements
+
+* Clean and modern design
+* Blue and white theme
+* Sidebar navigation
+* Responsive layout (mobile friendly)
+* Icons for each feature
+* Logout button
+
+---
+
+# 🔄 Navigation Flow
+
+1. Login Page
+2. Select Role (Student / Teacher)
+3. Redirect to respective dashboard
+4. Sidebar navigation for features
+5. Logout returns to login page
+
+---
+
+# 🚀 Extra Features (Optional)
+
+* Role-based authentication
+* JWT login security
+* Charts using Chart.js
+* Dark mode toggle
+* Admin panel
+
+---
+
+# 📌 Final Goal
+
+Create a simple but functional **Campus Administration System** that:
+
+✔ Has secure login
+✔ Separate dashboards
+✔ Redirects to JNTUH results
+✔ Provides syllabus and notes
+✔ Tracks attendance and marks
+✔ Teacher can manage student performance
+
+---
+
+If you want, I can now:
+
+* ✅ Generate full HTML + CSS + JS code
+* ✅ Generate Node.js backend code
+* ✅ Create React version for Replit
+* ✅ Make full working project zip structure
+
+Tell me which version you want.
