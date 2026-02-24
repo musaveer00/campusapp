@@ -13,12 +13,14 @@ export async function registerRoutes(
     try {
       const input = api.auth.login.input.parse(req.body);
       const user = await storage.getUserByUsername(input.username);
+      
+      // Basic login check for demo
       if (!user || user.password !== input.password) {
         return res.status(401).json({ message: "Invalid credentials" });
       }
       res.json(user);
     } catch (err) {
-      res.status(401).json({ message: "Invalid input" });
+      res.status(400).json({ message: "Invalid input" });
     }
   });
 
@@ -134,8 +136,8 @@ export async function registerRoutes(
 
 async function seedDatabase() {
   try {
-    const existingUsers = await storage.getUser(1);
-    if (!existingUsers) {
+    const adminUser = await storage.getUserByUsername("admin");
+    if (!adminUser) {
       await storage.createUser({ username: "admin", password: "admin123", role: "admin", name: "Admin User" });
       await storage.createUser({ username: "student", password: "student123", role: "student", name: "Demo Student" });
       await storage.createUser({ username: "teacher", password: "teacher123", role: "teacher", name: "Demo Teacher" });
@@ -150,6 +152,6 @@ async function seedDatabase() {
       await storage.createMark({ studentId: 2, subjectId: subject.id, mid1: 18, mid2: 19 });
     }
   } catch (err) {
-    console.log("Database not ready yet or empty schema");
+    console.log("Seed error:", err);
   }
 }
