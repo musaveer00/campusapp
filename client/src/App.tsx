@@ -18,12 +18,39 @@ import TeacherMarks from "@/pages/teacher/Marks";
 import TeacherSyllabus from "@/pages/teacher/Syllabus";
 import TeacherTextbooks from "@/pages/teacher/Textbooks";
 
+// Placeholder for Admin Dashboard
+const AdminDashboard = () => (
+  <div className="p-8">
+    <h1 className="text-3xl font-bold mb-4">Admin Dashboard</h1>
+    <p className="text-muted-foreground">Welcome to the administration panel. Here you can manage the campus system.</p>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      <div className="p-6 border rounded-lg bg-card shadow-sm">
+        <h3 className="font-semibold mb-2">User Management</h3>
+        <p className="text-sm text-muted-foreground">Manage students, teachers, and staff accounts.</p>
+      </div>
+      <div className="p-6 border rounded-lg bg-card shadow-sm">
+        <h3 className="font-semibold mb-2">System Settings</h3>
+        <p className="text-sm text-muted-foreground">Configure global campus settings and academic terms.</p>
+      </div>
+      <div className="p-6 border rounded-lg bg-card shadow-sm">
+        <h3 className="font-semibold mb-2">Reports</h3>
+        <p className="text-sm text-muted-foreground">View overall performance and attendance analytics.</p>
+      </div>
+    </div>
+  </div>
+);
+
 function Router() {
   return (
     <Switch>
       <Route path="/" component={() => <Redirect to="/login" />} />
       <Route path="/login" component={AuthPage} />
       
+      {/* Admin Routes */}
+      <Route path="/admin/dashboard">
+        <AppLayout><AdminDashboard /></AppLayout>
+      </Route>
+
       {/* Student Routes */}
       <Route path="/student/dashboard">
         <AppLayout><StudentDashboard /></AppLayout>
